@@ -1,0 +1,49 @@
+.box-form {
+    font-family: Signika Negative!important;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%) !important;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+label {
+    font-family: Signika Negative!important;
+    font-weight: 600;
+}
+
+.alert-errors {
+    font-family: Signika Negative!important;
+    color: #ff0000;
+    font-size: 14px;
+}
+
+.control-error {
+    border: 1px solid #ff0000!important;
+}
+
+.form-control {
+    outline: none!important;
+    border-radius: 0;
+}
+
+.form-control:focus {
+    box-shadow: none!important;
+}
+
+.form-control:focus {
+    border-color: #00cc66;
+    border-width: 1.5px;
+}
+
+input {
+    background: none!important;
+}
+
+.btn-add-user {
+    background-image: linear-gradient(90deg, #00ccff, #00b8e6)!important;
+    font-family: Signika Negative!important;
+    font-size: 16px;
+    padding: 7px 20px;
+    color: #fff;
+    border-radius: 5px;
+}

@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row my-3">
+        <div class="col-md-12">
+            <h2 class="Title-table">
+                Create new user
+                <a (click)="BackToHome()" class="btn btn-add-user  ">
+          Back
+          <i class="fas fa-undo px-1"></i>
+        </a>
+
+            </h2>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-md-6">
+            <div class="box-form">
+
+                <form [formGroup]="Formuser" class=" border border-light p-5" action="#!">
+
+
+
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label class="required">Firstname</label>
+                            <input type="text" name="first_name" formControlName="first_name" class="form-control" placeholder="First name" [ngClass]="{'control-error':(submitted && !Formuser.controls['first_name'].valid)}">
+                            <div class="alert-errors" *ngIf="(Formuser.controls['first_name']?.touched  && !Formuser.controls['first_name'].valid) ||
+                           (submitted && !Formuser.controls['first_name'].valid)">
+                                Please enter firstname
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label class="required">Lastname</label>
+                            <input type="text" class="form-control" formControlName="last_name" placeholder="Last name" [ngClass]="{'control-error':
+                            (submitted && !Formuser.controls['last_name'].valid)}">
+
+                            <div class="alert-errors" *ngIf="(Formuser.controls['last_name']?.touched  && !Formuser.controls['last_name'].valid) ||
+                            (submitted && !Formuser.controls['last_name'].valid)">
+                                Please enter lastname
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <label class="required">E-mail</label>
+                    <input type="text" name="email" formControlName="email" class="form-control" placeholder="@gmail.com" [ngClass]="{'control-error':
+                            (submitted && !Formuser.controls['email'].valid)}">
+
+                    <div class="alert-errors" *ngIf="(Formuser.controls['email']?.touched  && !Formuser.controls['email'].valid) ||
+                            (submitted && !Formuser.controls['email'].valid)">
+                        Please enter email
+
+                    </div>
+
+                    <label class="required">avatar</label>
+                    <input type="text" name="avatar" formControlName="avatar" class="form-control" placeholder="avatar" [ngClass]="{'control-error':
+                            (submitted && !Formuser.controls['avatar'].valid)}">
+
+                    <div class="alert-errors" *ngIf="(Formuser.controls['avatar']?.touched  && !Formuser.controls['avatar'].valid) ||
+                            (submitted && !Formuser.controls['avatar'].valid)">
+                        Please enter avatar
+
+                    </div>
+
+
+
+
+
+                    <button class=" btn btn-add-user   my-4 btn-block" type="submit" (click)="onsubmit()">create users</button>
+
+
+
+
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

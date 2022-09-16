@@ -1,0 +1,117 @@
+<div class="container my-5">
+    <div class="row my-3">
+        <div class="col-md-12">
+            <h2 class="Title-table">
+                Users DataBase
+            </h2>
+        </div>
+    </div>
+    <div class="row my-3 text-left justify-content-between ">
+
+        <div class="col-md-3 text-left">
+            <ul class="btn-page">
+                <li class="mx-2">
+                    <a type="button" [routerLink]="['create']" class="btn btn-add-user  ">
+                        <i class="fas fa-user-plus pr-3"></i> create new user
+                    </a>
+                </li>
+                <li class="mx-2">
+                    <button type="button" (click)="onDelete()" class="btn btn-delete-user  ">
+                      <i class="fas fa-trash-alt pr-3"></i> Delete user
+                       </button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="row">
+
+
+
+        <div class="col-md-12   my-3">
+            <table class="table ">
+                <thead class="Table-header">
+                    <tr>
+                        <th>
+                            <input type="checkbox" (click)="ToggleCheckedAll($event.target.checked)" />
+                        </th>
+                        <th>ID</th>
+                        <th>Full name</th>
+
+                        <th>image</th>
+                        <th>E-mail</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div>
+                        <ngx-spinner bdColor="none" template="<img src='./assets/img/imageLoading.gif' style='width:300px;'  />">
+                        </ngx-spinner>
+                    </div>
+
+                    <tr class="style-body" *ngFor="let user of userslist;let i=index;">
+                        <td>
+                            <input type="checkbox" class="ml-3" (click)="ToggleCheckeditem($event.target.checked,i)" [checked]="CheckedAllitem[i]" />
+                        </td>
+                        <td class="text-body-table">{{user.id}}</td>
+                        <td class="text-body-table">{{user.first_name}} {{user.last_name}}</td>
+                        <td class="text-body-table">
+                            <img src="{{user.avatar}}" class="rounded-circle  d-block" style="width:50px;" />
+                        </td>
+                        <td class="text-body-table">{{user.email}}</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="style-btn  dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                          <i class="fas fa-user-cog" style="font-size: 16px!important;"></i>
+                    </button>
+                                <ul class="dropdown-menu">
+                                    <li class="btn-setting-show">
+                                        <a [routerLink]="['UserDetails', user.id]" class="   py-2 px-2 mx-2 ">
+                                            <i class="fas fa-eye pr-1"></i> show
+                                        </a>
+
+                                    </li>
+                                    <li class="btn-setting-edit">
+                                        <a [routerLink]="['update', user.id]" class="   py-2 px-2 mx-2 ">
+                                            <i class="fas fa-user-edit pr-1"></i> Edit
+                                        </a>
+                                    </li>
+                                    <!-- <li class="btn-setting-edit">
+                                    <a type="button" (click)="oneditModal(item.id)" data-toggle="modal" [attr.data-target]="showexampleModal" class="    py-2 px-2 mx-2 ">
+                                        <i class="fas fa-user-edit pr-1"></i> Edit with Modal
+                                    </a>
+                                </li> -->
+                                    <li class="btn-setting-delete">
+                                        <a (click)="removeUser(user.id)" class="py-2 px-2 mx-2 ">
+                                            <i class="fas fa-trash-alt pr-1"></i> Remove
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><button class="page-link" [disabled]="page==1" (click)="getprevpage()">Previous</button></li>
+                    <li class="page-item" *ngFor="let pg of pagesarray;let i=index;">
+                        <button class="page-link" [disabled]="page==pg+1" (click)="GetTopage(pg)">{{pg}}</button>
+                    </li>
+                    <!-- <li class="page-item">
+                        <button class="page-link">2</button>
+                    </li>
+                    <li class="page-item">
+                        <button class="page-link">3</button>
+                    </li> -->
+                    <li class="page-item"><button class="page-link" [disabled]="page==Totalpage" (click)="getnextpage()">Next</button></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

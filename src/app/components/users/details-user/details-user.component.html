@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row my-3">
+        <div class="col-md-12">
+            <h2 class="Title-table">
+                user information
+                <!-- <a (click)="BackToHome()" class="btn btn-add-user  ">
+                Back
+                <i class="fas fa-undo px-1"></i>
+              </a> -->
+
+            </h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4 my-5">
+            <div>
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Card image -->
+
+                    <!-- Card content -->
+                    <div class="card-body text-center">
+
+                        <img src="{{user.avatar}}" class="rounded-circle text-center " width="150px" height="150px" alt="Card image cap" />
+
+                        <!-- Title -->
+                        <h4 class="card-title">
+                            {{user.first_name}} {{user.last_name}}
+                        </h4>
+
+                        <h4 class="card-title">
+                            {{user.email}}
+                        </h4>
+
+                        <button type="button" (click)="BackToHome()" class="btn btn-add-user  ">
+                            Back
+                            <i class="fas fa-undo px-1"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+
+            </div>
+        </div>
+    </div>
+</div>

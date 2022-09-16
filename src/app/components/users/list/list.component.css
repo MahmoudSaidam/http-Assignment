@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap');
+.Table-header {
+    background-image: linear-gradient(90deg, #00ccff, #00b8e6)!important;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%) !important;
+    font-family: Signika Negative!important;
+    text-align: left;
+}
+
+.Title-table {
+    font-size: 22px;
+    color: #262626;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text-body-table {
+    font-family: Signika Negative!important;
+    font-size: 14px;
+}
+
+.style-body {
+    text-align: left;
+    color: #333;
+    height: 20px;
+}
+
+.style-body:hover {
+    background-image: linear-gradient(45deg, #00ccff, #00b8e6)!important;
+    color: #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%) !important;
+}
+
+.table td,
+.table th {
+    vertical-align: inherit!important;
+}
+
+.btn-add-user {
+    background-image: linear-gradient(90deg, #00ccff, #00b8e6)!important;
+    font-family: Signika Negative!important;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn-delete-user {
+    background-image: linear-gradient(90deg, #ff1a1a, #ff3333)!important;
+    font-family: Signika Negative!important;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn-setting-edit {
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+}
+
+.btn-setting-edit a {
+    font-family: Signika Negative!important;
+    text-decoration: none!important;
+    color: #00b8e6;
+    font-size: 14px!important;
+}
+
+.fa-user-edit a {
+    color: #00b8e6;
+}
+
+.btn {
+    outline: none!important;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+.btn-setting-edit:hover {
+    background-color: #e6faff;
+    color: #fff!important;
+}
+
+.style-btn {
+    border: none!important;
+    background: none!important;
+}
+
+.btn-setting-delete a {
+    font-family: Signika Negative!important;
+    text-decoration: none!important;
+    color: #ff1a1a;
+    font-size: 14px!important;
+}
+
+.btn-setting-delete {
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+}
+
+.btn-setting-delete:hover {
+    background-color: #e6faff;
+    color: #fff!important;
+}
+
+.btn-setting-show {
+    padding-top: 5px!important;
+    padding-bottom: 5px!important;
+}
+
+.btn-setting-show a {
+    font-family: Signika Negative!important;
+    text-decoration: none!important;
+    color: #00cc66;
+    font-size: 14px!important;
+}
+
+.btn-setting-show:hover {
+    background-color: #e6faff;
+    color: #fff!important;
+}
+
+.dropdown-menu {
+    border-radius: 5px;
+    border: none!important;
+    background-color: #ffffff!important;
+    box-shadow: 0px 0px 50px 0px rgb(82 63 105 / 10%)!important;
+    animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1, menu-sub-dropdown-animation-move-up 0.3s ease 1;
+}
+
+.dropdown-toggle {
+    font-size: 16px!important;
+}
+
+.btn-page {
+    display: -webkit-inline-box!important;
+}
+
+.btn-page li {
+    list-style: none!important;
+}
